@@ -5,3 +5,6 @@ dist-test/
 dist-packages/
 *.tgz
 *.log
+.localappdata/
+.npm-cache-local/
+.pnpm-home/
