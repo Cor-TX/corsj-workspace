@@ -1,0 +1,5 @@
+packages:
+  - core
+  - corsj-app
+  # 阶段二：corsj-dsh（DSH/Cordis bundle 插件，复用 @corsj/core 同套命令）
+  - corsj-dsh

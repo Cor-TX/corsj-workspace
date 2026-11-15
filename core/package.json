@@ -1,0 +1,30 @@
+{
+  "name": "@cor-tx/core",
+  "version": "0.1.0",
+  "description": "corsj 共享核心：工程对象模型、A 层命令执行器、B 层设计循环与交付门禁",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
+    "./model": { "types": "./dist/model/index.d.ts", "default": "./dist/model/index.js" },
+    "./commands": { "types": "./dist/commands/index.d.ts", "default": "./dist/commands/index.js" },
+    "./design": { "types": "./dist/design/index.d.ts", "default": "./dist/design/index.js" },
+    "./locator": { "types": "./dist/locator/index.d.ts", "default": "./dist/locator/index.js" },
+    "./ui-contract": { "types": "./dist/ui-contract/index.d.ts", "default": "./dist/ui-contract/index.js" },
+    "./assets": { "types": "./dist/assets/index.d.ts", "default": "./dist/assets/index.js" }
+  },
+  "files": ["dist", "assets"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test dist/../test/*.test.mjs"
+  },
+  "dependencies": {
+    "fflate": "^0.8.2",
+    "poly2tri": "^1.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "typescript": "^5.6.3"
+  }
+}

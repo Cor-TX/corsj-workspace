@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    // 工程决策（§5.0 授权范围内的实现选择）：
+    // 核心数值内核（FEA / 几何 / EDA / 物理）密集使用定长数值数组与矩阵索引，
+    // 开启 noUncheckedIndexedAccess 会产生约 280 处与真实缺陷无关的断言噪声。
+    // 这些索引的边界由内核入口的显式维度校验（buildMesh / solveStatic 等）保证，
+    // 因此 core 包关闭该项，保留 strict 的其余全部检查。
+    "noUncheckedIndexedAccess": false
+  },
+  "include": ["src/**/*.ts"]
+}

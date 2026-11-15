@@ -1,0 +1,279 @@
+{
+  "manifest_version": "corsj.build/1",
+  "core_version": "0.1.0",
+  "generated_at": "2026-11-15T01:58:02.525Z",
+  "entries": [
+    {
+      "component": "assets/index.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "assets/index.js",
+      "sha256": "9b32b6eb6aeb5fe1c249286e4c3c12cf2cb5d8c5d45dd3cd898a0437ce6975d0"
+    },
+    {
+      "component": "commands/builtin/eda-kernel.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "commands/builtin/eda-kernel.js",
+      "sha256": "35adb30e92010234b8a8fd7bc16e9a150c97fa9e49d6debae901a9bf24d602d4"
+    },
+    {
+      "component": "commands/builtin/extension-commands.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "commands/builtin/extension-commands.js",
+      "sha256": "8f03f7d90ccd3ff12cc68930d67eceaebbc6b1269936f8dc9080be0d2c891427"
+    },
+    {
+      "component": "commands/builtin/fea-kernel.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "commands/builtin/fea-kernel.js",
+      "sha256": "74127751f0340f7b53efa039b7273a861a777994bf83caee4e2be29353d39082"
+    },
+    {
+      "component": "commands/builtin/geometry-kernel.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "commands/builtin/geometry-kernel.js",
+      "sha256": "c7ee1e064853d3b0b0eae204fde1bc6b1379d81940f5cb2e85b70f0b41a76c2a"
+    },
+    {
+      "component": "commands/builtin/physics-kernels.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "commands/builtin/physics-kernels.js",
+      "sha256": "0d5b13341ac5c2bacdb4aa4948a6d60d66d125ba74e317b85cc34c0a96962058"
+    },
+    {
+      "component": "commands/builtin/propeller-kernel.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "commands/builtin/propeller-kernel.js",
+      "sha256": "8d98955d1441f9ad9a8fe176457becb16b23e5e026ebb9a8ae628e24c35f7abe"
+    },
+    {
+      "component": "commands/builtin/register.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "commands/builtin/register.js",
+      "sha256": "f058c7ee3b0639e9c6aae73349c1eae36ee9395536bc071fc69e5a03a1fa489f"
+    },
+    {
+      "component": "commands/core-commands-1.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "commands/core-commands-1.js",
+      "sha256": "db4ee360849487c6c5a6ae6f7a52e94a9ba0f27d36559d088bbb69cc3201ae14"
+    },
+    {
+      "component": "commands/core-commands-2.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "commands/core-commands-2.js",
+      "sha256": "7ad640982968a43eee4a70c5845237b0454ef1a3554a675e5f67f349b8ac78ae"
+    },
+    {
+      "component": "commands/core-commands-3.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "commands/core-commands-3.js",
+      "sha256": "df45c808ef52053910188c8b6cca884f0d249029f8b6c163c03b775bf02df07d"
+    },
+    {
+      "component": "commands/core-commands-4.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "commands/core-commands-4.js",
+      "sha256": "9000079fce81a402deb43ac846ddccbf96228b095ff789af89b038b40cf4bcb7"
+    },
+    {
+      "component": "commands/index.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "commands/index.js",
+      "sha256": "240db5b36c457c10f0d2ae7ef57a6b47c406328e019add2d4ba5f5bb4b82f5f1"
+    },
+    {
+      "component": "commands/registry.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "commands/registry.js",
+      "sha256": "90ea028acb52dbd6167a81309920365dab6fe35e7a0c260943eb757fdd87e6c8"
+    },
+    {
+      "component": "commands/types.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "commands/types.js",
+      "sha256": "6e00d06e7f4950af34248c0b059c419422e1511398fe6101b2fc0b6c5f9d32f4"
+    },
+    {
+      "component": "design/acceptance-spec/eligibility-matrix.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "design/acceptance-spec/eligibility-matrix.js",
+      "sha256": "0d66d0394e570428df162754fd911e61c085b356dc70ef2c254696c4e2147542"
+    },
+    {
+      "component": "design/acceptance-spec/generator.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "design/acceptance-spec/generator.js",
+      "sha256": "e84da1ebf9a994d2cfe966569eb88f8badf9b63caba1a2a61038a4e9f34ad06d"
+    },
+    {
+      "component": "design/acceptance-spec/schema.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "design/acceptance-spec/schema.js",
+      "sha256": "4b9a8e0f8ec45ebd1482ea3365c59c94b54475d0689ffaa9a5caa2b51c16ca9a"
+    },
+    {
+      "component": "design/config/loader.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "design/config/loader.js",
+      "sha256": "ccce13f3edcf7dd879bca19f815ddda658211e94aa42ebed8e7119b6f2ed1650"
+    },
+    {
+      "component": "design/config/schema.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "design/config/schema.js",
+      "sha256": "afb10e67b40048db59daa751165b9b45916c6b7cc09178c54e3d6c135e88a31b"
+    },
+    {
+      "component": "design/degradation.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "design/degradation.js",
+      "sha256": "1a279653ab5da2e3f798fa80f6fcc816e68ba980dc72893b51761f5a3a0b0739"
+    },
+    {
+      "component": "design/delivery-gate.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "design/delivery-gate.js",
+      "sha256": "f291b37c8ee36bc66cf947e9349721485b18ca6b35e2970cfac5c98b3b397161"
+    },
+    {
+      "component": "design/engine.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "design/engine.js",
+      "sha256": "5f6277c830a2f64b8c7fac801070717c7a9f99ba7a2c9e7fb0ebaecece9d92db"
+    },
+    {
+      "component": "design/index.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "design/index.js",
+      "sha256": "51bbec9b26fb0cc9d995a7a056b77bd46a4a922fd9c52eee7c5d8e473ccd7528"
+    },
+    {
+      "component": "design/state-machine.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "design/state-machine.js",
+      "sha256": "588e49870b064d88cc17292f8f0a07810d16c4ecc541e0d89ad9275cde7da027"
+    },
+    {
+      "component": "index.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "index.js",
+      "sha256": "a442ecc744f5f43c8298144c93bb6eafa47ccaf5d4f241d47b3ff04678b7e8d6"
+    },
+    {
+      "component": "locator/index.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "locator/index.js",
+      "sha256": "47b7588a359115c902042f723563555185d64c9a375fa2c587568a15db68efbe"
+    },
+    {
+      "component": "model/eop-types.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "model/eop-types.js",
+      "sha256": "333d5749b1cd18e27c7824f67e87a656557b2f66fbfd10eb9671e01187b133d2"
+    },
+    {
+      "component": "model/eop.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "model/eop.js",
+      "sha256": "53ae59d85d04e0460e855504dac28da9f2a2461535cf6550b91e465856fab6ba"
+    },
+    {
+      "component": "model/index.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "model/index.js",
+      "sha256": "f3c401d176945e00e001268dfeea216babc7e23292c975d41b300e8856276423"
+    },
+    {
+      "component": "model/quantity-schema.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "model/quantity-schema.js",
+      "sha256": "3e132b4a8843f08a4bd4fbe2621c99d42de2f8c9cc4eb89c55edc3f5ccbe0a40"
+    },
+    {
+      "component": "model/units.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "model/units.js",
+      "sha256": "8489d7027c589c8f2909d546011059317f024132c5fa73297e806f6fa7ed5346"
+    },
+    {
+      "component": "model/viewer.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "model/viewer.js",
+      "sha256": "a1d03db89eb1c658bce7baeb817708ada2e87b76328a747bbfec57c8b51b92cb"
+    },
+    {
+      "component": "ui-contract/index.js",
+      "license": "MIT",
+      "version": "0.1.0",
+      "level": "L1",
+      "artifact_path": "ui-contract/index.js",
+      "sha256": "ed3a073730d873bde6e4915727acdd120c5dc2bc24ffa77edf4811a5d841459a"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+import { cpSync, mkdirSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+const here = dirname(fileURLToPath(import.meta.url));
+const root = join(here, '..');
+const src = join(root, 'src/renderer/index.html');
+const dstDir = join(root, 'dist/renderer');
+mkdirSync(dstDir, { recursive: true });
+cpSync(src, join(dstDir, 'index.html'));
+console.log('copied index.html -> dist/renderer/index.html');

@@ -1,0 +1,12 @@
+# dsh-corsj bundle patch: mounts the corsj DSH plugin into the profile composition.
+#
+# The host entry resolves to this package's main entry, dist/index.js (package.json
+# "main"); the client half is discovered via package.json dsh.client and the
+# exports["./client"] subpath, which points at dist/client.js.
+#
+# This patch inserts one composition row. Row order carries no load semantics;
+# activation is service-availability driven.
+
+- insert:
+    - id: dsh-corsj
+      name: 'dsh-corsj'

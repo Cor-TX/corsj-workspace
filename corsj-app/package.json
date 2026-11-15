@@ -1,0 +1,25 @@
+{
+  "name": "corsj-app",
+  "version": "0.1.0",
+  "private": true,
+  "description": "corsj 独立桌面应用（Electron）：七步设计闭环 + A/B/C 三区界面，模型供应商配置完全隔离",
+  "type": "commonjs",
+  "main": "dist/main/main.js",
+  "author": "corsj",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/copy-renderer.mjs",
+    "start": "electron .",
+    "dist:win": "tsc -p tsconfig.json && electron-builder --win nsis-web --x64 --config electron-builder.config.mjs",
+    "dist:dir": "tsc -p tsconfig.json && electron-builder --dir --config electron-builder.config.mjs"
+  },
+  "dependencies": {
+    "@corsj/core": "workspace:*"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "@types/node": "^22.9.0",
+    "typescript": "^5.6.3"
+  }
+}

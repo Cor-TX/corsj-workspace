@@ -1,0 +1,175 @@
+
+===== conversation.session @28173152 =====
+ce.startSession(void 0,{clearPreviousDraft:false,agentPreset:`cordis`})};scope.effect(()=>{creatorDraft=startCreatorDraft;const chip=scope.slots.register({name:`conversation.hero.agentPreset`,locale:`settings.agentPreset`,inject:seatInjected},AgentPresetSeat);const label=scope.slots.register({name:`conversation.session.header.actions`,id:`agent-preset`,order:-10,locale:`settings.agentPreset`,inject:labelInjected},AgentPresetLabel);return()=>{creatorDraft=void 0;chip();label()}},`ui-agent-preset: new-session chip and header label`);scope.slots.inject(`plugins.add.actions`,()=>scope.slots.register({name:`plugins.add.actions`,id:`create-plugin`,locale:`settings.agentPreset`,inject:()=>({hooks:{agentPresets:controller.store},load:()=>controller.load(),startCreatorDraft})},CreatePluginMenuItem))});const captureBlankSessionSync=()=>{const summary=Object.values(ctx.sessions.list.getSnapshot().byId).find(session=>session.blank&&(session.retainedBy.mainView??0)>0);const binding=summary===void 0
+
+===== conversation.session @28181959 =====
+apshot bound by the renderer as useAgentPresets. */
+    agentPresets: SnapshotStore<AgentPresetSettingsState>
+  }
+  /** Read the roster, so the label can show a name rather than an id. */
+  load: () => Promise<void>
+}
+
+/** Full component props. */
+export type AgentPresetLabelProps =
+  PropsRuntime<'conversation.session.header.actions'>
+  & PropsLocale<'settings.agentPreset'>
+  & InjectFace<AgentPresetLabelInjected>
+
+/**
+ * Render this session's agent-preset name beside its title.
+ * @param props - composed slot props.
+ * @returns the label, or null when the session records no preset.
+ */
+export function AgentPresetLabel({
+  sessionId, useSessions, useAgentPresets, load, t,
+}: AgentPresetLabelProps) {
+  const preset = useSessions((state) => {
+    const value = state.byId[sessionId]?.projectionValues?.agentPreset
+    return typeof value === 'string' ? value : undefined
+  })
+  const options = useAgentPresets(state => state.options)
+
+  useEffect(() => {
+    // Deployments that compose no p
+
+===== conversation.session @28311643 =====
+pe.effect(() => {
+      creatorDraft = startCreatorDraft
+      const chip = scope.slots.register({
+        name: 'conversation.hero.agentPreset',
+        locale: 'settings.agentPreset',
+        inject: seatInjected,
+      }, AgentPresetSeat)
+      const label = scope.slots.register({
+        name: 'conversation.session.header.actions',
+        id: 'agent-preset',
+        // Static session context occupies the header's leading negative-order band.
+        order: -10,
+        locale: 'settings.agentPreset',
+        inject: labelInjected,
+      }, AgentPresetLabel)
+      return () => {
+        creatorDraft = undefined
+        chip()
+        label()
+      }
+    }, 'ui-agent-preset: new-session chip and header label')
+
+    scope.slots.inject('plugins.add.actions', () => scope.slots.register({
+      name: 'plugins.add.actions',
+      id: 'create-plugin',
+      locale: 'settings.agentPreset',
+      inject: () => ({
+        hooks: { agentPresets: controller.store },
+        load: () => control
+
+===== conversation.session @28424137 =====
+n.input.model.options`,()=>scope.slots.register({name:`conversation.input.model.options`,id:`agent-team`,locale:NS,inject:sessionId=>({selectTeamMode:enabled=>selectTeamMode(sessionId,enabled),requestDisableConfirmation:()=>{disableRequest.set({sessionId})}})},TeamModeToggle))})});ctx.slots.inject(`conversation.session.header.actions.subagent.footer`,()=>ctx.slots.register({name:`conversation.session.header.actions.subagent.footer`,id:`agent-team`,locale:NS},TeamBoard))}function apply(ctx){registerAgentTeamUi(ctx)}exports.apply=apply;exports.inject=inject;return module.exports}});
+//# sourceMappingURL=client.js.map//#region lib/types/index.js
+/** Pure host half for the browser-discovered Agent Teams UI plugin. */
+/** Host plugin body; Team behavior lives in the browser export and Host RPC domain. */
+function apply() {}
+//#endregion
+export { apply };
+{
+  "meta": {
+    "title": "Teampanel",
+    "description": "Zeigen Sie Teammitglieder und freigegebene Aufgaben an und navigieren Sie zu M
+
+===== conversation.view @29720920 =====
+{kind:`keyed`,scope:`session`,inject:CHAT_NODE_INJECT}},inject:sessionId=>{const binding=ctx.sessions.binding(sessionId);if(binding===void 0)throw new Error(`ui-chat: unknown session "${sessionId}"`);return{...nodeSources(binding),hooks:{presentation,connectionState}}}},ChatFlow));ctx.slots.inject(`conversation.view`,()=>{return ctx.slots.register({name:`conversation.view`,id:`chat`,order:0,label:()=>t(`view.chat`),locale:NS,children:{"conversation.chat.flow":{kind:`single`,scope:`session`,inject:CHAT_FLOW_INJECT},"conversation.chat.text-interaction":{kind:`keyed`,scope:`session`},"conversation.chat.markdown.fence":{kind:`hoc`,scope:`session`}},store:chatStore,inject:sessionId=>{const binding=ctx.sessions.binding(sessionId);if(binding===void 0)throw new Error(`ui-chat: unknown session "${sessionId}"`);const session=binding.session;const chat=chatSource(binding);return{...nodeSources(binding),fileDrag:ctx.fileDrag.actions,hooks:{presentation,interactionIds:ctx.uiConversation.interaction
+
+===== conversation.view @29720977 =====
+nject:sessionId=>{const binding=ctx.sessions.binding(sessionId);if(binding===void 0)throw new Error(`ui-chat: unknown session "${sessionId}"`);return{...nodeSources(binding),hooks:{presentation,connectionState}}}},ChatFlow));ctx.slots.inject(`conversation.view`,()=>{return ctx.slots.register({name:`conversation.view`,id:`chat`,order:0,label:()=>t(`view.chat`),locale:NS,children:{"conversation.chat.flow":{kind:`single`,scope:`session`,inject:CHAT_FLOW_INJECT},"conversation.chat.text-interaction":{kind:`keyed`,scope:`session`},"conversation.chat.markdown.fence":{kind:`hoc`,scope:`session`}},store:chatStore,inject:sessionId=>{const binding=ctx.sessions.binding(sessionId);if(binding===void 0)throw new Error(`ui-chat: unknown session "${sessionId}"`);const session=binding.session;const chat=chatSource(binding);return{...nodeSources(binding),fileDrag:ctx.fileDrag.actions,hooks:{presentation,interactionIds:ctx.uiConversation.interactions},dispatchInteraction:gesture=>ctx.uiConversation.intera
+
+===== conversation.view @29750089 =====
+ ChatFlowDataInjected => {
+      const binding = ctx.sessions.binding(sessionId)
+      if (binding === undefined) throw new Error(`ui-chat: unknown session "${sessionId}"`)
+      return { ...nodeSources(binding), hooks: { presentation, connectionState } }
+    },
+  }, ChatFlow))
+
+  ctx.slots.inject('conversation.view', () => {
+    const disposeView = ctx.slots.register({
+      name: 'conversation.view',
+      id: 'chat',
+      order: 0,
+      label: () => t('view.chat'),
+      locale: NS,
+      children: {
+        'conversation.chat.flow': { kind: 'single', scope: 'session', inject: CHAT_FLOW_INJECT },
+        'conversation.chat.text-interaction': { kind: 'keyed', scope: 'session' },
+        'conversation.chat.markdown.fence': { kind: 'hoc', scope: 'session' },
+      },
+      store: chatStore,
+      inject: (sessionId: SessionId): ChatViewInjected => {
+        const binding = ctx.sessions.binding(sessionId)
+        if (binding === undefined) throw new Error(`ui-chat: unknown session "${
+
+===== conversation.view @29750175 =====
+ if (binding === undefined) throw new Error(`ui-chat: unknown session "${sessionId}"`)
+      return { ...nodeSources(binding), hooks: { presentation, connectionState } }
+    },
+  }, ChatFlow))
+
+  ctx.slots.inject('conversation.view', () => {
+    const disposeView = ctx.slots.register({
+      name: 'conversation.view',
+      id: 'chat',
+      order: 0,
+      label: () => t('view.chat'),
+      locale: NS,
+      children: {
+        'conversation.chat.flow': { kind: 'single', scope: 'session', inject: CHAT_FLOW_INJECT },
+        'conversation.chat.text-interaction': { kind: 'keyed', scope: 'session' },
+        'conversation.chat.markdown.fence': { kind: 'hoc', scope: 'session' },
+      },
+      store: chatStore,
+      inject: (sessionId: SessionId): ChatViewInjected => {
+        const binding = ctx.sessions.binding(sessionId)
+        if (binding === undefined) throw new Error(`ui-chat: unknown session "${sessionId}"`)
+        const session = binding.session
+        const chat = chatSource(
+
+===== conversation.chat @19821148 =====
+ed when it returns. Read session data through the slot props' selector hooks, subscribing to the smallest slice. Do not write DOM outside your component or append to `document.body`.
+- Add a Chat row by registering an event definition with `ctx.uiConversation.events.register()` and its view in the `conversation.chat.node` slot under the definition's `kind`, which is the renderer key; the Conversation layer owns paging, Turn and Step placement, and incremental assembly.
+- When the Client needs a value derived from a session, declare `wire.view` on the Host projection. The value reaches the Client already computed; the Client does not fold session events itself.
+- **Start with minimal context:** expose purpose, available actions, and constraints first; load detailed instructions when needed.
+- **Make discovery explicit:** every deferred resource needs a clear description and a reliable way to retrieve it.
+- **Keep critical constraints visible:** permissions, destructive effects, and requ
+
+===== conversation.chat @27947558 =====
+ummary` in its own layout and owns its header, controls, status and footer. A second body for the same action is a registration error.
+
+-----
+
+<a id="understand-the-implementation"></a>
+## Understand the implementation
+
+<details>
+<summary>Implementation internals — click to expand</summary>
+
+One `conversation.chat.turnTail` entry reads the `actionCards` Session projection and shows the card admitted in its Turn after that Turn has ended with a final answer; a Turn that ends without answer text shows no card, and should several cards share a Turn, the lowest call id is shown. The frame sets `data-action-card` to the call id and names its region by the card title. Folding counts a wide grapheme, such as a Chinese character, as two Latin-letter widths and folds after about 260; it never measures layout or alters the full text.
+
+A `tool.call.toolview` entry keyed `propose_action` renders the process row from the recorded call arguments and result. The plugin provides the body registry at
+
+===== conversation.chat @27952160 =====
+�文把 `summary` 放进自己的布局，并负责自己的标题栏、控件、状态和底部操作。为同一动作注册第二个正文属于注册错误。
+
+-----
+
+<a id="understand-the-implementation"></a>
+## 实现原理
+
+<details>
+<summary>实现细节——点击展开</summary>
+
+一个 `conversation.chat.turnTail` 条目读取 `actionCards` 会话投影，在某一轮以最终回答结束后展示该轮接受的卡片；没有回答文本就结束的轮次不显示卡片，若同一轮有多张卡片，显示调用 id 最小的一张。框架把 `data-action-card` 设为调用 id，并以卡片标题命名所在区域。折叠时，宽字素（如汉字）按两个拉丁字母宽度计算，约 260 个单位后折叠；折叠不测量布局，也不改动完整文本。
+
+一个以 `propose_action` 为键的 `tool.call.toolview` 条目，根据记录的调用参数和结果渲染过程行。插件在顶层提供正文注册表，然后挂载生成的 `actionCards` Remote，�
+
+===== conversation.chat @27979233 =====
+rUi(inner,registry)});try{await ui}catch(error){await ui.dispose();await unmount();throw error}return async()=>{await ui.dispose();await unmount()}}function registerUi(ctx,registry){ctx.effect(()=>ctx.locale.register(`actionCards`,{en,zh,ja,es,fr,de,ru,pt}),`action-cards: locale`);ctx.slots.inject(`conversation.chat.turnTail`,()=>ctx.slots.register({name:`conversation.chat.turnTail`,id:`@deepseek-ai/dsh-client-ui-action-cards`,locale:`actionCards`,inject:sessionId=>({sessionId,hooks:{bodies:registry.source},bind:locale=>ctx.locale.bind(locale),act:async(callId,verb,payload)=>{const result=await ctx.remote.actionCards.act(sessionId,callId,verb,payload);return result.ok?result.value:void 0}})},ActionCardTail));ctx.slots.inject(`tool.call.toolview`,()=>ctx.slots.register({name:`tool.call.toolview`,key:`propose_action`,locale:`actionCards`},ProposeRow))}async function apply(ctx){return await mountActionCards(ctx,TYPERT_REMOTE)}exports.apply=apply;exports.inject=inject;return module.exports

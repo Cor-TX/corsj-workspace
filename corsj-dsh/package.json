@@ -1,0 +1,61 @@
+﻿{
+  "name": "dsh-corsj",
+  "version": "0.1.0",
+  
+  "description": "corsj DSH/Cordis bundle锛歴idebar.footer.action 鍏ュ彛 + shell.overlay 鍏ㄥ睆闈㈡澘锛屼富杩涚▼ IPC 杞彂澶嶇敤 @corsj/core 鍚屽鍛戒护锛涗娇鐢?DSH 鍏ㄥ眬妯″瀷锛屼笉鎸佹湁 API key",
+  "keywords": [
+    "corsj",
+    "dsh-plugin",
+    "cordis",
+    "design-loop"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "default": "./dist/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "cordis.patch.yml"
+  ],
+  "engines": {
+    "node": ">=22.15"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "selfcheck": "node scripts/selfcheck.mjs"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "cordis.patch.yml",
+      "listedByDefault": true
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "typescript": "^5.6.3"
+  },
+  "peerDependencies": {
+    "cordis": "^3"
+  },
+  "peerDependenciesMeta": {
+    "cordis": {
+      "optional": true
+    }
+  }
+}

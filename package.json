@@ -1,0 +1,21 @@
+{
+  "name": "corsj-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "description": "corsj 通用工程设计系统 workspace（@corsj/core + corsj-app + corsj-dsh）",
+  "packageManager": "pnpm@9.15.9",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build:core": "corepack pnpm -F @corsj/core build",
+    "build:app": "corepack pnpm -F corsj-app build",
+    "build": "corepack pnpm -r build",
+    "selfcheck": "node scripts/selfcheck.mjs",
+    "manifest:core": "node core/scripts/gen-manifest.mjs",
+    "changeset": "corepack pnpm changeset",
+    "version-packages": "corepack pnpm changeset version && node scripts/version-sync.mjs"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.9",
+    "typescript": "^5.6.3"
+  }
+}
